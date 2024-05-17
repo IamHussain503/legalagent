@@ -206,65 +206,6 @@ To bring the Housing Legal Advisory Virtual Firm to life, we need to design a ro
 
 ### High-Level Architecture Diagram
 
-```mermaid
-graph TD
-    subgraph Frontend
-        UI[User Interface]
-        Chatbot[Chatbot]
-    end
-
-    subgraph Backend
-        Auth[Authentication Service]
-        ClientService[Client Service]
-        LegalService[Legal Advice Service]
-        DocService[Document Service]
-        CaseService[Case Management Service]
-        FollowUpService[Follow-Up Service]
-    end
-
-    subgraph AI/ML
-        NLP[NLP Models]
-        CustomModels[Custom ML Models]
-    end
-
-    subgraph Data
-        RelationalDB[Relational Database]
-        NoSQLDB[NoSQL Database]
-        DataLake[Data Lake]
-    end
-
-    subgraph Cloud Infrastructure
-        Compute[Compute Resources]
-        Storage[Storage Resources]
-        Network[Networking]
-    end
-
-    subgraph DevOps
-        CI_CD[CI/CD Pipeline]
-        Monitoring[Monitoring & Logging]
-    end
-
-    subgraph Security
-        Encryption[Encryption]
-        AccessControl[Access Control]
-        Compliance[Compliance]
-    end
-
-    UI --> Backend
-    Chatbot --> Backend
-    Backend --> AI/ML
-    Backend --> Data
-    Backend --> Cloud Infrastructure
-    AI/ML --> Data
-    DevOps --> Backend
-    Security --> Backend
-    Security --> Data
-    Security --> Cloud Infrastructure
-```
-
-
-
----
 
 ## High Level Design ##
 This high-level design and technical recommendations should provide a solid foundation for developing the Housing Legal Advisory Virtual Firm. Each component can be further detailed and refined during the implementation phase to ensure the system meets all functional and non-functional requirements.
